@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ui.PaymentsListUIController">
+   <children>
+      <SplitPane dividerPositions="0.11528822055137844" layoutX="398.0" layoutY="223.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="88.0" prefWidth="998.0" style="-fx-background-color: brown;">
+               <children>
+                  <Label layoutX="51.0" layoutY="44.0" text="Paiements" textFill="WHITE">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="14.0" text="Liste des" textFill="WHITE">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="paymentsTableView" layoutX="31.0" layoutY="89.0" prefHeight="590.0" prefWidth="937.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="75.0" text="#" />
+                      <TableColumn fx:id="paymentReferenceColumn" prefWidth="165.0" text="Ref Paiement" />
+                        <TableColumn fx:id="paymentDateColumn" prefWidth="121.0" text="Date " />
+                        <TableColumn fx:id="payrollAmountColumn" prefWidth="161.0" text="Payé (XOF)" />
+                        <TableColumn fx:id="remainderColumn" prefWidth="183.0" text="Relicat (XOF)" />
+                        <TableColumn fx:id="orderReferenceColumn" prefWidth="202.0" text="Reférence Commande" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="searchTextField" layoutX="269.0" layoutY="30.0" prefHeight="31.0" prefWidth="699.0" />
+                  <Label fx:id="" layoutX="24.0" layoutY="32.0" prefHeight="31.0" prefWidth="231.0" text="Recherche par mots-clés" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

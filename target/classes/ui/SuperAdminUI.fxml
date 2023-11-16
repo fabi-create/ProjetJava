@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.SuperAdminUIController">
+   <children>
+      <HBox layoutX="302.0" layoutY="220.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: purple;">
+               <children>
+                  <Label layoutX="42.0" layoutY="32.0" prefHeight="140.0" prefWidth="316.0" text="Gestion des utilisateurs" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="36.0" layoutY="684.0" mnemonicParsing="false" onAction="#goToAdminUI" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Aller vers ---&gt;">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="23.0" layoutY="245.0" prefHeight="178.0" prefWidth="316.0" text="Gestion des utilisateurs (création, modification, suppression, etc …)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Verdana Pro" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: orange;">
+               <children>
+                  <Label layoutX="42.0" layoutY="34.0" prefHeight="140.0" prefWidth="316.0" text="Gestion des produits" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="122.0" layoutY="681.0" mnemonicParsing="false" onAction="#goToChefUI" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Aller vers ---&gt;">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="42.0" layoutY="236.0" prefHeight="178.0" prefWidth="316.0" text="Gestion des produits Création (définition de l’intitulé, ajout d’images, définition des prix et description, etc..),Modification, Suppression, etc …" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Verdana Pro" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: blue;">
+               <children>
+                  <Label layoutX="42.0" layoutY="38.0" prefHeight="140.0" prefWidth="316.0" text="Gestion des ventes" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="206.0" layoutY="683.0" mnemonicParsing="false" onAction="#goToRestaurateurUI" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Aller vers ---&gt;">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="48.0" layoutY="255.0" prefHeight="291.0" prefWidth="316.0" text="Consultation de la liste des produits disponibles (recherche par mot-clé, etc..) Prise de commandes (Saisie, enregistrement et validation des commandes) Enregistrement des paiements Suivi des recettes journalières, hebdomadaire, mensuelle, etc .. (d’autres critères peuvent être associés. Par exemple :selon le produit)." textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

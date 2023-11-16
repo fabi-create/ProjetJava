@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AuthUIController">
+   <children>
+      <SplitPane dividerPositions="0.8283208020050126" layoutX="3.0" layoutY="2.0" prefHeight="700.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="698.0" prefWidth="108.0">
+               <children>
+                  <Label layoutX="52.0" layoutY="74.0" prefHeight="58.0" prefWidth="270.0" text="Connexion" textFill="#eb09d8">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="loginTextField" layoutX="61.0" layoutY="400.0" prefHeight="31.0" prefWidth="521.0" />
+                  <Label layoutX="61.0" layoutY="364.0" text="Nom d'utilisateur">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="448.0" prefHeight="21.0" prefWidth="115.0" text="Mot de passe">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="loginErrorText" layoutX="61.0" layoutY="555.0" prefHeight="31.0" prefWidth="521.0" text="Nom d'utilisateur ou mot de passe incorrect. Veuillez réessayer" textFill="RED">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="validButton" defaultButton="true" layoutX="61.0" layoutY="607.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="39.0" prefWidth="148.0" style="-fx-background-color: #EE82EE; -fx-text-fill: white;" text="Se connecter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="passwordTextField" layoutX="61.0" layoutY="484.0" prefHeight="31.0" prefWidth="521.0" />
+                  <ImageView fitHeight="316.0" fitWidth="367.0" layoutX="266.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+		              <Image url="@../images/login.png" />
+		           </image>
+		          </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="698.0" prefWidth="501.0" style="-fx-background-color: #EE82EE;">
+               <children>
+                  <Button fx:id="quitButton" cancelButton="true" layoutX="18.0" layoutY="28.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="39.0" prefWidth="97.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Quitter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

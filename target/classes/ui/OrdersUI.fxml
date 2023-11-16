@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.OrdersUIController">
+   <children>
+      <SplitPane dividerPositions="0.4491525423728814" layoutX="332.0" layoutY="176.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="91.0" text="Rechercher">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="searchTextField" layoutX="156.0" layoutY="91.0" prefHeight="31.0" prefWidth="394.0" />
+                  <Label layoutX="27.0" layoutY="14.0" prefHeight="58.0" prefWidth="316.0" text="Commandes" textFill="#3409eb">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="239.0" layoutY="17.0" prefHeight="52.0" prefWidth="145.0" text="La liste des commandes de la plateforme." wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="107.0" text="par reférence">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addOrder" defaultButton="true" layoutX="410.0" layoutY="30.0" mnemonicParsing="false" onAction="#goToEditOrder" prefHeight="37.0" prefWidth="139.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Ajouter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="ordersTableView" layoutX="27.0" layoutY="152.0" prefHeight="621.0" prefWidth="523.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="75.0" text="#" />
+                      <TableColumn fx:id="referenceColumn" prefWidth="105.0" text="Reférence" />
+                        <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="687.0">
+               <children>
+                  <Label fx:id="orderReferenceLabel" layoutX="47.0" layoutY="61.0" prefHeight="31.0" prefWidth="293.0" text="N de Référence :" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="514.0" layoutY="25.0" prefHeight="58.0" prefWidth="158.0" text="Details" textFill="#3409eb">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="orderDateLabel" layoutX="47.0" layoutY="39.0" prefHeight="31.0" prefWidth="306.0" text="Date de commande" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="orderTotalPriceLabel" layoutX="534.0" layoutY="730.0" prefHeight="31.0" prefWidth="145.0" text="..." textAlignment="RIGHT" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="534.0" layoutY="699.0" prefHeight="31.0" prefWidth="145.0" text="TOTAL (XOF)" textAlignment="RIGHT" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="47.0" layoutY="668.0" prefHeight="31.0" prefWidth="190.0" text="Status de Paiement" textAlignment="RIGHT" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="orderPaiementStatusLabel" layoutX="47.0" layoutY="699.0" prefHeight="82.0" prefWidth="293.0" text="..." textAlignment="RIGHT" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="productsTableView" layoutX="46.0" layoutY="121.0" prefHeight="529.0" prefWidth="621.0">
+                    <columns>
+                      <TableColumn fx:id="productIdColumn" prefWidth="75.0" text="#" />
+                      <TableColumn fx:id="productNameColumn" prefWidth="75.0" text="Produit" />
+                        <TableColumn fx:id="productQuantityColumn" prefWidth="97.0" text="Quantité" />
+                        <TableColumn fx:id="productUnitPriceColumn" prefWidth="123.0" text="Prix Unitaire" />
+                        <TableColumn fx:id="productTotalColumn" prefWidth="75.0" text="Total" />
+                    </columns>
+                  </TableView>
+                  <Button defaultButton="true" layoutX="483.0" layoutY="660.0" mnemonicParsing="false" onAction="#goToEditPayment" prefHeight="37.0" prefWidth="184.0" style="-fx-background-color: teal; -fx-text-fill: white;" text="Passer au paiement">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="456.0" layoutY="79.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="37.0" prefWidth="211.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Supprimer la commande">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.EditProductUIController">
+   <children>
+      <SplitPane dividerPositions="0.20050125313283207" layoutX="176.0" layoutY="258.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: orange;">
+               <children>
+                  <Button defaultButton="true" layoutX="20.0" layoutY="26.0" mnemonicParsing="false" onAction="#closeUI" prefHeight="38.0" prefWidth="114.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Quitter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="898.0" prefWidth="617.0">
+               <children>
+                  <Label fx:id="successText" layoutX="24.0" layoutY="28.0" prefHeight="58.0" prefWidth="221.0" text="Produit ajouté avec succès !!" textFill="#0d7511" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="429.0" layoutY="35.0" prefHeight="58.0" prefWidth="164.0" text="Produit" textFill="#eb7f09">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="480.0" layoutY="14.0" prefHeight="58.0" prefWidth="128.0" text="Gérer" textAlignment="RIGHT" textFill="#3d09eb">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="24.0" layoutY="819.0" mnemonicParsing="false" onAction="#clearInputs" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Effacer">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="452.0" layoutY="819.0" mnemonicParsing="false" onAction="#validEdition" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: orange; -fx-text-fill: white;" text="Valider">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errorText" layoutX="24.0" layoutY="782.0" prefHeight="31.0" prefWidth="521.0" text="Tous les champs doivent être remplis" textFill="RED">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="115.0" text="Nom du produit">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameTextField" layoutX="24.0" layoutY="150.0" prefHeight="31.0" prefWidth="558.0" />
+                  <TextField fx:id="priceTextField" layoutX="24.0" layoutY="234.0" prefHeight="31.0" prefWidth="558.0" />
+                  <Label layoutX="24.0" layoutY="199.0" text="Prix">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="283.0" text="Description">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="descriptionTextField" layoutX="24.0" layoutY="318.0" prefHeight="31.0" prefWidth="558.0" />
+                  <TextField fx:id="stockTextField" layoutX="24.0" layoutY="403.0" prefHeight="31.0" prefWidth="558.0" />
+                  <Label layoutX="24.0" layoutY="368.0" text="Quantité">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="551.0" text="Images">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="461.0" text="Catégorie">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="categoryComboBox" layoutX="22.0" layoutY="490.0" prefHeight="31.0" prefWidth="558.0" />
+                  <Button fx:id="uploadButton" layoutX="440.0" layoutY="544.0" mnemonicParsing="false" onAction="#uploadProductImage" text="Ajouter une image" />
+                  <ImageView fx:id="productImage1" fitHeight="150.0" fitWidth="150.0" layoutX="22.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="productImage2" fitHeight="150.0" fitWidth="150.0" layoutX="226.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="productImage3" fitHeight="150.0" fitWidth="150.0" layoutX="436.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button layoutX="211.0" layoutY="544.0" mnemonicParsing="false" onAction="#clearImages" prefHeight="31.0" prefWidth="221.0" text="Supprimer les images" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

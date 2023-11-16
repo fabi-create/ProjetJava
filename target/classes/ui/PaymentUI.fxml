@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.PaymentUIController">
+   <children>
+      <SplitPane dividerPositions="0.11027568922305764" layoutX="111.0" layoutY="282.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: teal;">
+               <children>
+                  <Label layoutX="25.0" layoutY="27.0" text="Paiement" textFill="WHITE">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="382.0" layoutY="21.0" mnemonicParsing="false" onAction="#quit" prefHeight="38.0" prefWidth="102.0" text="Quitter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button layoutX="358.0" layoutY="641.0" mnemonicParsing="false" onAction="#validPayment" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: teal; -fx-text-fill: white;" text="Confirmer">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="199.0" layoutY="641.0" mnemonicParsing="false" onAction="#deletePayment" prefHeight="38.0" prefWidth="142.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Supprimer">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="totalPriceLabel" layoutX="233.0" layoutY="113.0" prefHeight="20.0" prefWidth="244.0" text="..." textAlignment="RIGHT" textFill="#279a35">
+                     <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="113.0" text="Prix total (XOF) :">
+                     <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="" layoutX="27.0" layoutY="63.0" prefHeight="31.0" prefWidth="174.0" text="Date de commande :" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="" layoutX="27.0" layoutY="23.0" prefHeight="31.0" prefWidth="293.0" text="Référence commande :" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="orderDateLabel" layoutX="203.0" layoutY="63.0" prefHeight="31.0" prefWidth="276.0" text="..." wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="orderReferenceLabel" layoutX="220.0" layoutY="23.0" prefHeight="31.0" prefWidth="264.0" text="..." wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="paymentDateLabel" layoutX="200.0" layoutY="568.0" prefHeight="31.0" prefWidth="276.0" text="..." wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="1" layoutX="24.0" layoutY="568.0" prefHeight="31.0" prefWidth="174.0" text="Date de paiment :" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="11" layoutX="23.0" layoutY="493.0" prefHeight="31.0" prefWidth="194.0" text="Référence paiement :" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="paymentReferenceLabel" layoutX="224.0" layoutY="493.0" prefHeight="61.0" prefWidth="251.0" text="..." wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="12" layoutX="23.0" layoutY="430.0" prefHeight="31.0" prefWidth="174.0" text="Rélicat dû" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="balanceDueLabel" layoutX="146.0" layoutY="430.0" prefHeight="31.0" prefWidth="329.0" text="..." textFill="#0a18f0" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="payrollAmountTextField" layoutX="27.0" layoutY="239.0" prefHeight="31.0" prefWidth="445.0" />
+                  <Label fx:id="121" layoutX="27.0" layoutY="197.0" prefHeight="31.0" prefWidth="174.0" text="Montant payé" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="1211" layoutX="27.0" layoutY="298.0" prefHeight="31.0" prefWidth="329.0" text="Montant rendu (Relicat/Monnaie)" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="remainderTextField" layoutX="27.0" layoutY="340.0" prefHeight="31.0" prefWidth="445.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

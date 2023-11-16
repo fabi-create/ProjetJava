@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ProductDetailsUIController">
+   <children>
+      <SplitPane dividerPositions="0.818295739348371" layoutX="248.0" layoutY="173.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="68.0" layoutY="16.0" prefHeight="58.0" prefWidth="316.0" text="Produit" textFill="#eb9609">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="34.0" prefHeight="58.0" prefWidth="316.0" text="Details" textFill="#3409eb">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="117.0" text="Nom du produit : ">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="82.0" layoutY="244.0" text="Quantité">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="318.0" text="Catégorie">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="82.0" layoutY="378.0" text="Description">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameText" layoutX="434.0" layoutY="117.0" text="...">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stockText" layoutX="434.0" layoutY="244.0" text="...">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="categoryText" layoutX="434.0" layoutY="318.0" text="...">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descriptionText" layoutX="434.0" layoutY="378.0" text="...">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceText" layoutX="433.0" layoutY="183.0" text="...">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="183.0" text="Prix (XOF): ">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="productImage1" fitHeight="150.0" fitWidth="150.0" layoutX="87.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="productImage3" fitHeight="150.0" fitWidth="150.0" layoutX="558.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="productImage2" fitHeight="150.0" fitWidth="150.0" layoutX="305.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: orange;">
+               <children>
+                  <Button fx:id="updateButton" defaultButton="true" layoutX="796.0" layoutY="40.0" mnemonicParsing="false" onAction="#openUpdateProductUI" prefHeight="44.0" prefWidth="204.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Mettre à jour">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteButton" defaultButton="true" layoutX="1016.0" layoutY="40.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="44.0" prefWidth="131.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Supprimer">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

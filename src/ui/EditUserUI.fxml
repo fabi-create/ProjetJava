@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="776.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.EditUserUIController">
+   <children>
+      <SplitPane dividerPositions="0.8283208020050126" layoutX="13.0" layoutY="12.0" prefHeight="700.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="698.0" prefWidth="108.0" style="-fx-background-color: pur;">
+               <children>
+                  <Label layoutX="68.0" layoutY="42.0" prefHeight="58.0" prefWidth="316.0" text="Gérer" textFill="#3d09eb">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="loginTextField" layoutX="70.0" layoutY="201.0" prefHeight="31.0" prefWidth="521.0" />
+                  <TextField fx:id="passwordTextField" layoutX="70.0" layoutY="285.0" prefHeight="31.0" prefWidth="521.0" />
+                  <Label layoutX="70.0" layoutY="165.0" text="Nom d'utilisateur">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="248.0" prefHeight="21.0" prefWidth="115.0" text="Mot de passe">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="inputErrorText" layoutX="73.0" layoutY="631.0" prefHeight="31.0" prefWidth="521.0" text="Tous les champs doivent être remplis" textFill="RED">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="76.0" layoutY="679.0" mnemonicParsing="false" onAction="#validEdition" prefHeight="38.0" prefWidth="165.0" style="-fx-background-color: #EE82EE; -fx-text-fill: white;" text="Valider">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="roleComboBox" layoutX="73.0" layoutY="374.0" prefHeight="31.0" prefWidth="514.0" />
+                  <Label layoutX="70.0" layoutY="340.0" prefHeight="21.0" prefWidth="242.0" text="Type d'utilisateur (Rôle)">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="71.0" prefHeight="58.0" prefWidth="316.0" text="Utilisateur" textFill="#eb09d8">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="73.0" layoutY="431.0" prefHeight="21.0" prefWidth="115.0" text="Nom">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastnameTextField" layoutX="73.0" layoutY="468.0" prefHeight="31.0" prefWidth="521.0" />
+                  <TextField fx:id="firstnameTextField" layoutX="73.0" layoutY="563.0" prefHeight="31.0" prefWidth="521.0" />
+                  <Label layoutX="73.0" layoutY="526.0" prefHeight="21.0" prefWidth="115.0" text="Prénom">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="436.0" layoutY="679.0" mnemonicParsing="false" onAction="#clearInputs" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Effacer">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="successText" layoutX="366.0" layoutY="62.0" prefHeight="58.0" prefWidth="221.0" text="Utilisateur ajouté avec succès !!" textFill="#0d7511" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="698.0" prefWidth="501.0" style="-fx-background-color: #EE82EE;">
+               <children>
+                  <Button defaultButton="true" layoutX="16.0" layoutY="28.0" mnemonicParsing="false" onAction="#closeUI" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Quitter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AdminDashboardUIController">
+   <children>
+      <SplitPane dividerPositions="0.8130217028380634" layoutX="33.0" layoutY="32.0" prefHeight="700.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="698.0" prefWidth="108.0" style="-fx-background-color: pur;">
+               <children>
+                  <Label layoutX="39.0" layoutY="14.0" prefHeight="58.0" prefWidth="316.0" text="Gestion des" textFill="#3409eb">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="39.0" layoutY="121.0" text="La liste des utilisateurs de la plateforme.">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="39.0" layoutY="43.0" prefHeight="58.0" prefWidth="316.0" text="Utilisateurs" textFill="#eb09d8">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="820.0" layoutY="30.0" mnemonicParsing="false" onAction="#openAddUserUI" prefHeight="35.0" prefWidth="111.0" style="-fx-background-color: EE82EE; -fx-text-fill: white;" text="Ajouter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="usersTableView" layoutX="37.0" layoutY="160.0" prefHeight="608.0" prefWidth="897.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+                      <TableColumn fx:id="firstnameColumn" prefWidth="115.0" text="Firstname" />
+                        <TableColumn fx:id="lastnameColumn" prefWidth="124.0" text="Lastname" />
+                        <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+                    </columns>
+                  </TableView>
+                  <Button defaultButton="true" layoutX="741.0" layoutY="99.0" mnemonicParsing="false" onAction="#initialize" prefHeight="35.0" prefWidth="193.0" style="-fx-background-color: EE82EE; -fx-text-fill: white;" text="Rafraîchir la liste">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="698.0" prefWidth="501.0" style="-fx-background-color: #EE82EE;">
+               <children>
+                  <Button fx:id="quitButton" defaultButton="true" layoutX="12.0" layoutY="26.0" mnemonicParsing="false" onAction="#logout" prefHeight="35.0" prefWidth="193.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Quitter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="10.0" layoutY="719.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="35.0" prefWidth="193.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Supprimer">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="10.0" layoutY="672.0" mnemonicParsing="false" onAction="#openUpdateUserUI" prefHeight="35.0" prefWidth="193.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Mettre à jour">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="11.0" layoutY="511.0" prefHeight="87.0" prefWidth="199.0" style="-fx-background-color: black;" text="Sélectionnez un utilisateur pour utiliser les options ci-dessous" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="10.0" layoutY="623.0" mnemonicParsing="false" onAction="#openUserDetailsUI" prefHeight="35.0" prefWidth="193.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Details">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

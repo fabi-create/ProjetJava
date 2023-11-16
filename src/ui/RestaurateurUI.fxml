@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RestaurateurUIController">
+   <children>
+      <SplitPane dividerPositions="0.7929883138564274" layoutX="260.0" layoutY="355.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="72.0" text="La liste des produits de la plateforme.">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="14.0" prefHeight="58.0" prefWidth="316.0" text="Restauration" textFill="#3409eb">
+                     <font>
+                        <Font name="OCR A Extended" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="productsTableView" layoutX="27.0" layoutY="164.0" prefHeight="557.0" prefWidth="897.0">
+                     <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+                        <TableColumn fx:id="nameColumn" prefWidth="115.0" text="Nom" />
+                        <TableColumn fx:id="priceColumn" prefWidth="124.0" text="Prix" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="118.0" text="Stock" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="144.0" text="Categorie" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="searchTextField" layoutX="220.0" layoutY="113.0" prefHeight="31.0" prefWidth="704.0" />
+                  <Label layoutX="27.0" layoutY="121.0" text="Rechercher/mots-clés">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="736.0" layoutY="731.0" mnemonicParsing="false" onAction="#openCreateOrderUI" prefHeight="37.0" prefWidth="188.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Creer une commande">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="27.0" layoutY="747.0" text="Sélectionnés">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="counterProductSelected" layoutX="150.0" layoutY="747.0" text="0">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: blue;">
+               <children>
+                  <Button fx:id="quitButton" defaultButton="true" layoutX="108.0" layoutY="25.0" mnemonicParsing="false" onAction="#logout" prefHeight="37.0" prefWidth="109.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Quitter">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="23.0" layoutY="595.0" mnemonicParsing="false" onAction="#openOrdersUI" prefHeight="37.0" prefWidth="194.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Commandes">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="23.0" layoutY="659.0" mnemonicParsing="false" onAction="#openPaymentsUI" prefHeight="37.0" prefWidth="194.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Paiements">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="25.0" layoutY="720.0" mnemonicParsing="false" onAction="#openRecipesUI" prefHeight="37.0" prefWidth="188.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Recettes">
+                     <font>
+                        <Font name="OCR A Extended" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
